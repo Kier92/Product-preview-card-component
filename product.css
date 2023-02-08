@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+    --cream: hsl(30, 38%, 92%);
+    --cyan: hsl(158, 36%, 37%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --desktop-border: 12px;
+    --mobile-border: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--grayish-blue);
+    background-color: var(--cream);
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: calc(var(--mobile-width) -2rem);
+    background-color: var(--white);
+}
+
+picture img {
+    width: 100%;
+    border-top-left-radius: var(--mobile-border);
+    border-top-right-radius: var(--mobile-border);
+}
+
+.text-container {
+    padding: 1.9rem;
+}
+
+.category {
+    font-size: .8rem;
+    letter-spacing: .8rem;
+}
+
+.title {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 1.3rem 0;
+    line-height: 2rem;
+    color: var(--dark-blue);
+}
+
+.description {
+    line-height: 1.3rem;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.title-cyan {
+    color: var(--cyan);
+}
+
+.price-disabled {
+    text-decoration: line-through;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    width: 100%;
+    padding: .8rem;
+    color: var(--white);
+    border: none;
+    border-radius: var(--mobile-border);
+}
+
+.btn-cyan {
+    background-color: var(--cyan);
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: calc(var(--desktop-width) / 2.6);
+        display: flex;
+    }
+
+    .col {
+        width: 50%;
+    }
+
+    picture img {
+        border-top-left-radius: var(--desktop-border);
+        border-bottom-left-radius: var(--desktop-border);
+        border-top-right-radius: 0;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
